@@ -15,10 +15,10 @@ jobs:
       - name: Send GitHub Action triggered data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.15.0
-        with:
-          channel-id: C02A5AP88RX
-          slack-message: New Pull Request to main-practice branch
+        # with:
+        #   channel-id: C02A5AP88RX
+        #   slack-message: New Pull Request to main-practice branch
         env:
           SLACK_WEBHOOK_URL: $ {{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       
