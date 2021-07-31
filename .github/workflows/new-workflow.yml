@@ -1,4 +1,4 @@
-name: "Docker Actions"
+name: "Docker Actions - Joke"
 
 on: [push]
 
@@ -8,7 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      - name: "hello-github-action"
-        run: |
-          echo Hello, world!
+      - name: Random joke
+        uses: ./.github/actions/random-joke
 

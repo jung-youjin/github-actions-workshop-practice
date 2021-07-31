@@ -1,0 +1,16 @@
+name: Yoda language
+
+description: Get external data with GitHub actions (yoda language api)
+
+inputs:
+  text:
+    description: Text to translate to yoda language
+    required: true
+
+# outputs:
+#   translated:
+#     description: Result translated yodish text from http://www.yodajeff.com/pages/talk/yodish.shtml
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
