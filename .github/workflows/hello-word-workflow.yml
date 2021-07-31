@@ -11,3 +11,6 @@ jobs:
 
       - name: hello-action
         uses: ./.github/actions/hello-world
+        with:
+          youjin: "Group Member YouJin"
+          justin: "Group Leader Justin"
