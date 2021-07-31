@@ -1,0 +1,15 @@
+name: 'slack-send'
+
+description: 'Publish a message in a channel or send a JSON payload to the Slack Workflow Builder'
+
+inputs:
+  payload: # JSON payload to send to Slack via webhook
+    description: 'JSON payload to send to Slack if webhook route. If not supplied, json from GitHub event will be sent instead'
+    required: false
+outputs:
+  time: # id of output
+    description: 'The time'
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
