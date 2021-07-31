@@ -1,0 +1,16 @@
+name: Hello Group member
+
+description: Say hello to members with GitHub Actions
+
+inputs:
+  youjin:
+    description: "group member"
+    required: false
+  
+  justin:
+    description: "group leader"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
