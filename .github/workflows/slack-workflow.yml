@@ -4,6 +4,7 @@ name: Pull Request Workflow
 on: 
   pull_request:
     branches: [main-practice]
+    types: [opened, synchronize]
 
 jobs:
   action:
