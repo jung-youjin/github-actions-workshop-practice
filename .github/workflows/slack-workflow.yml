@@ -21,6 +21,7 @@ jobs:
   
           # slack-message: New Pull Request to main-practice branch
         env:
+
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}    
 
 # contexts: https://github.com/actions/toolkit/blob/main/packages/github/src/context.ts
