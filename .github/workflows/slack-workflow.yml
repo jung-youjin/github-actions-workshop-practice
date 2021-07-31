@@ -1,0 +1,23 @@
+# https://github.com/marketplace/actions/slack-send
+name: Pull Request Workflow
+
+on: 
+  pull_request:
+    branches: [main-practice]
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    name: New PR to repo
+    steps:
+
+      - name: Send GitHub Action trigger data to Slack workflow
+      - uses: actions/checkout@v1
+        id: slack
+        uses: slackapi/slack-github-action@v1.14.0
+        with:
+          channel-id: T029C06N43Z
+          slack-message: New Pull Request to main-practice branch
+        env:
+          SLACK_WEBHOOK_URL: $ {{ secrets.SLACK_WEBHOOK_URL }}
+      
