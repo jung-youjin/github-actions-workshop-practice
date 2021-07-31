@@ -17,7 +17,7 @@ jobs:
         uses: slackapi/slack-github-action@v1.15.0
         with:
           # payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }}ful by @${{ github.actor }}>"}'
-          payload: '{ "text":"<https://github.com/${{ github.repository }}/pull/${{ github.event.issue.number }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }}ful by @${{ github.actor }}>"}'
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/pull/${{ github.event.number }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }}ful by @${{ github.actor }}>"}'
   
           # slack-message: New Pull Request to main-practice branch
         env:
