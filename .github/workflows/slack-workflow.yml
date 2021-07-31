@@ -13,9 +13,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack
-        uses: slackapi/slack-github-action@v1.14.0
+        uses: slackapi/slack-github-action@v1.15.0
         with:
-          channel-id: T029C06N43Z
+          channel-id: C029YT0TLUC
           slack-message: New Pull Request to main-practice branch
         env:
           SLACK_WEBHOOK_URL: $ {{ secrets.SLACK_WEBHOOK_URL }}
