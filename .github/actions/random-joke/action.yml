@@ -1,16 +1,11 @@
-name: Yoda language
+name: Random joke
 
-description: Get external data with GitHub actions (yoda language api)
+description: Get external random joke data with GitHub actions 
 
-inputs:
-  text:
-    description: Text to translate to yoda language
-    required: true
-
-# outputs:
-#   translated:
-#     description: Result translated yodish text from http://www.yodajeff.com/pages/talk/yodish.shtml
-
+outputs:
+  joke:
+    description: Returning joke from Joke API
+    
 runs:
   using: "docker"
   image: "Dockerfile"
