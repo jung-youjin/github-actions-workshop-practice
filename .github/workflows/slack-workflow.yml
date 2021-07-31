@@ -16,11 +16,8 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.15.0
         with:
-          payload: "{\"text\":${{ toJSON(format('{0} {1}', github.workflow, job.status)) }}}"
-        # with:
-        #   channel-id: C02A5AP88RX
-        #   slack-message: New Pull Request to main-practice branch
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }}>"}'
+          # slack-message: New Pull Request to main-practice branch
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          # SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       
