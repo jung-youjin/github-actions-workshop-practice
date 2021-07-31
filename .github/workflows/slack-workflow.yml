@@ -15,6 +15,8 @@ jobs:
       - name: Send GitHub Action triggered data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.15.0
+        with:
+          payload: "{\"text\":${{ toJSON(format('{0} {1}', github.workflow, job.status)) }}}"
         # with:
         #   channel-id: C02A5AP88RX
         #   slack-message: New Pull Request to main-practice branch
