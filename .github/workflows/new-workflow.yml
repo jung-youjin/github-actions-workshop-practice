@@ -1,18 +1,4 @@
-# name: "Docker Actions"
-
-# on: [push]
-
-# jobs:
-#   action:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v1
-      
-#       - name: "hello-github-action"
-#         run: |
-#           echo Hello, world!
-
-name: Slack Actions
+name: "Docker Actions"
 
 on: [push]
 
@@ -25,4 +11,3 @@ jobs:
       - name: "hello-github-action"
         run: |
           echo Hello, world!
-
