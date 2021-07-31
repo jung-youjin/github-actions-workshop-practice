@@ -16,8 +16,11 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.15.0
         with:
-          payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }} by @${{ github.pull_request.assignee }}>"}'
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }} by @${{ env.GITHUB_REPOSITORY.pull_request.assignee }}>"}'
           # slack-message: New Pull Request to main-practice branch
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      
+    
+
+# contexts: https://github.com/actions/toolkit/blob/main/packages/github/src/context.ts
+# https://github.com/marketplace/actions/action-slack
