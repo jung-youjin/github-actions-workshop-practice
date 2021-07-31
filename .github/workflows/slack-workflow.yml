@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: New PR to repo
     steps:
-
-      - name: Send GitHub Action trigger data to Slack workflow
       - uses: actions/checkout@v1
+      - name: Send GitHub Action trigger data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
         with:
