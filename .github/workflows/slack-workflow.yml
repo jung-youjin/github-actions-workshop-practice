@@ -16,7 +16,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.15.0
         with:
-          payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }}>"}'
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }} ${{ github.job }}: ${{ job.status }} by @${{ github.pull_request.assignee }}>"}'
           # slack-message: New Pull Request to main-practice branch
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
