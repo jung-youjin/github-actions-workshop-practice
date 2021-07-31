@@ -5,7 +5,7 @@ joke_url = "https://geek-jokes.sameerkumar.website/api?format=json"
 get_joke = requests.get(joke_url)
 joke_obj = get_joke.json()
 
-joke_text = joke_obj["text"]
+joke_text = joke_obj["joke"]
 
 print(joke_text)
 print(f"::set-output name=joke::{joke_text}")
